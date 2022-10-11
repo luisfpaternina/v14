@@ -44,11 +44,10 @@
             </field>
         </record>
 
-
-        <menuitem id="school_area" name="Areas" parent="menu_school_settings"
-                  action="action_view_area"/>           
+        <menuitem 
+            id="school_area"
+            name="Areas"
+            parent="menu_school_settings"
+            action="action_view_area"/>           
     </data>
 </odoo>
-              
-       
-

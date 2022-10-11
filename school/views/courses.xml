@@ -54,12 +54,11 @@
             </field>
         </record>
 
-
-        <menuitem id="school_courses" name="Courses" parent="menu_school_settings"
-                  action="action_view_courses"/>
+        <menuitem 
+            id="school_courses"
+            name="Courses"
+            parent="menu_school_settings"
+            action="action_view_courses"/>
            
     </data>
 </odoo>
-              
-       
-
