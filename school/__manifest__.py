@@ -38,6 +38,7 @@
         'views/school.xml',
         'views/students.xml',
         'views/teachers.xml',
+        'views/settings.xml',
         #'reports/report_license_plates.xml',
               
     ],

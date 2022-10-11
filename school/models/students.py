@@ -8,9 +8,7 @@ class Students(models.Model):
 
     _name = "students"
     _description = "students"
-    
 
-    
     name = fields.Char(string='Name', required=True, tracking=True)
     identification_type = fields.Selection([('cc','CC'),('ni','NI'),('ce','CE')], string="ID Type", tracking=True)
     identification_number = fields.Char(string="Identification Number", tracking=True)

@@ -80,11 +80,10 @@
            <field name="number_increment">1</field>
         </record>
 
-
-        <menuitem id="school_license_plates" name="License Plates" parent="menu_school_settings"
-                  action="action_view_license_plates"/>           
+        <menuitem 
+            id="school_license_plates"
+            name="License Plates"
+            parent="menu_school_settings"
+            action="action_view_license_plates"/>           
     </data>
 </odoo>
-              
-       
-
