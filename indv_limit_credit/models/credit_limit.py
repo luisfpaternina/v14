@@ -147,11 +147,11 @@ class CreditLimit(models.Model):
     def calculate_credit(self):
         for record in self:
             if record.fee_numbers > 0 and record.percentage > 0:
-                credit_value = record.credit_amount
                 tasa = record.percentage / 100
-                quota = (1 - (1 + tasa)** tasa)
-                div = quota / record.percentage
-                record.credit_amount_total = credit_value / div
+                plazo = record.fee_numbers
+                monto = record.credit_amount_total
+                a = monto * ((tasa (1 + tasa)** plazo - 1))
+                record.credit_amount_total = a
             else:
                 record.credit_amount_total = 0
 
