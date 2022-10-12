@@ -29,6 +29,7 @@
         'security/ir.model.access.csv',
         'views/credit_limit.xml',
         'views/res_partner.xml',
+        'views/sale_order.xml',
                    
     ],
     'installable': True
