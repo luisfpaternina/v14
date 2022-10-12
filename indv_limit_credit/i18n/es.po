@@ -18,7 +18,7 @@ msgstr ""
 #. module: indv_limit_credit
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Necesita acción"
 
 #. module: indv_limit_credit
 #: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__approved
