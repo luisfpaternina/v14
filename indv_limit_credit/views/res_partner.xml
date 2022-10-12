@@ -9,6 +9,7 @@
 
             <xpath expr="//field[(@name='email')]" position="after">
                 <field name="has_credit" invisible="0"/>
+                <field name="credit_value" invisible="0"/>
             </xpath>
 
         </field>
