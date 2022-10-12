@@ -4,4 +4,5 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
     has_credit = fields.Boolean(
-        string="Has a current credit")
+        string="Has a current credit",
+        related="partner_id.has_credit")
