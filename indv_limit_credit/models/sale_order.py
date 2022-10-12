@@ -6,3 +6,6 @@ class SaleOrder(models.Model):
     has_credit = fields.Boolean(
         string="Has a current credit",
         related="partner_id.has_credit")
+    credit_value = fields.Float(
+        string="Credit value",
+        related="partner_id.credit_value")
