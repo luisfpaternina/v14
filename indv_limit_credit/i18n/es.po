@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 00:31+0000\n"
-"PO-Revision-Date: 2022-10-11 00:31+0000\n"
+"POT-Creation-Date: 2022-10-12 15:32+0000\n"
+"PO-Revision-Date: 2022-10-12 15:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -62,6 +62,24 @@ msgid "Cancel credit"
 msgstr "Crédito cancelado"
 
 #. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot make this sale because the amount exceeds the customer's credit "
+"limit: %s"
+msgstr "No se puede realizar esta operación porque el monto excede el límite de crédito del cliente"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: indv_limit_credit
+#: model:ir.model,name:indv_limit_credit.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: indv_limit_credit
 #: model_terms:ir.actions.act_window,help:indv_limit_credit.action_view_credit_limit
 msgid "Create new record"
 msgstr "Crear nuevo registro"
@@ -107,6 +125,16 @@ msgid "Credit type"
 msgstr "Tipo"
 
 #. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_bank_statement_line__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_payment__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_users__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__credit_value
+msgid "Credit value"
+msgstr "Valor del crédito"
+
+#. module: indv_limit_credit
 #: model:ir.ui.menu,name:indv_limit_credit.menu_credit_limit_principal
 msgid "Credits"
 msgstr "Créditos"
@@ -125,7 +153,7 @@ msgstr "Fecha"
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__description
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__description
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: indv_limit_credit
 #: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__credit_type__direct
@@ -136,6 +164,7 @@ msgstr "Directo"
 #: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__display_name
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__display_name
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__display_name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__display_name
 #: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -188,12 +217,23 @@ msgstr "GENERAR Y CALCULAR CUOTAS"
 #. module: indv_limit_credit
 #: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
 msgid "Group By"
-msgstr ""
+msgstr "Agrupar por"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_bank_statement_line__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_payment__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_users__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__has_credit
+msgid "Has a current credit"
+msgstr "Tiene crédito activo"
 
 #. module: indv_limit_credit
 #: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__id
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__id
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__id
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__id
 #: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__id
 msgid "ID"
 msgstr ""
@@ -234,6 +274,7 @@ msgstr "Asiento contable"
 #: model:ir.model.fields,field_description:indv_limit_credit.field_account_move____last_update
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit____last_update
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines____last_update
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner____last_update
 #: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
@@ -377,6 +418,7 @@ msgstr ""
 
 #. module: indv_limit_credit
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__state
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
 msgid "State"
 msgstr "Estado"
 
@@ -457,7 +499,7 @@ msgstr "Crédito"
 #. module: indv_limit_credit
 #: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_tree
 msgid "credit_limit"
-msgstr ""
+msgstr "limite_credito"
 
 #. module: indv_limit_credit
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__percentage
