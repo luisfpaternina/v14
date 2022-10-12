@@ -88,8 +88,7 @@ class CreditLimit(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('name', 'New') == 'New':
-            vals['name'] = self.env['ir.sequence'].next_by_code('credit.limit') or 'New'       
-
+            vals['name'] = self.env['ir.sequence'].next_by_code('credit.limit') or 'New'
         result = super(CreditLimit, self).create(vals)
         return result
 
@@ -156,7 +155,6 @@ class CreditLimit(models.Model):
             else:
                 record.credit_amount_total = 0
 
-
     def compute_credits(self):
         for credit in self:
             credit.credit_line_ids.unlink()
@@ -170,9 +168,6 @@ class CreditLimit(models.Model):
                     })
                 date_start = date_start + relativedelta(months=1)
         return True
-
-
-
 
 
 class CreditLimitLines(models.Model):
