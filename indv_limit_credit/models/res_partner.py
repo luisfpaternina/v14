@@ -16,12 +16,13 @@ class ResPartner(models.Model):
 
 
     def compute_has_a_credit(self):
-        credit_obj = self.env['credit.limit'].search([
-            ('partner_id', '=', self.id),
-            ('state', '=', 'approved')], limit=1)
-        if credit_obj:
-            self.has_credit = True
-            self.credit_value = credit_obj.credit_amount
-        else:
-            self.has_credit = False
-            self.credit_value = 0
+        for record in self:
+            credit_obj = record.env['credit.limit'].search([
+                ('partner_id', '=', record.id),
+                ('state', '=', 'approved')], limit=1)
+            if credit_obj:
+                record.has_credit = True
+                record.credit_value = credit_obj.credit_amount
+            else:
+                record.has_credit = False
+                record.credit_value = 0
