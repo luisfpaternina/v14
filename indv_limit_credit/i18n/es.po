@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 15:32+0000\n"
-"PO-Revision-Date: 2022-10-12 15:32+0000\n"
+"POT-Creation-Date: 2022-10-12 16:46+0000\n"
+"PO-Revision-Date: 2022-10-12 16:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -62,12 +62,15 @@ msgid "Cancel credit"
 msgstr "Crédito cancelado"
 
 #. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/account_move.py:0
 #: code:addons/indv_limit_credit/models/sale_order.py:0
 #, python-format
 msgid ""
 "Cannot make this sale because the amount exceeds the customer's credit "
 "limit: %s"
-msgstr "No se puede realizar esta operación porque el monto excede el límite de crédito del cliente"
+msgstr ""
+"No se puede realizar esta operación porque el monto excede el límite de "
+"crédito del cliente"
 
 #. module: indv_limit_credit
 #: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__company_id
@@ -444,6 +447,11 @@ msgstr "La tasa de interés no puede ser menor a cero"
 #: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__credit_type__third
 msgid "Third"
 msgstr "Tercero"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.inherti_view_credit_sale_order
+msgid "This contact has a current credit"
+msgstr "Este cliente tiene un crédito en curso"
 
 #. module: indv_limit_credit
 #: code:addons/indv_limit_credit/models/credit_limit.py:0
