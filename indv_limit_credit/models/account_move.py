@@ -12,3 +12,10 @@ class AccountMove(models.Model):
     credit_value = fields.Float(
         string="Credit value",
         related="partner_id.credit_value")
+
+
+    @api.constrains('partner_id')
+    def _check_has_credit(self):
+        for record in self:
+            if record.has_credit and record.amount_total > record.credit_value:
+                raise ValidationError(_("Cannot make this sale because the amount exceeds the customer's credit limit: %s" % record.credit_value))
