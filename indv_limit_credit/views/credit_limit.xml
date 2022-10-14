@@ -97,6 +97,7 @@
                                         <tree editable="bottom">
                                             <field name="item" invisible="1"/>
                                             <field name="name"/>
+                                            <field name="credit_amount"/>
                                             <field name="credit_id" invisible="1"/>
                                             <field name="date"/>
                                         </tree>
