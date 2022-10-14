@@ -179,7 +179,7 @@ class CreditLimitLines(models.Model):
         'credit.limit',
         string="Credit")
     credit_amount = fields.Float(
-        string="Credit amount")
+        string="Quote value")
     date = fields.Date(
         string="Date")
     item = fields.Integer(
