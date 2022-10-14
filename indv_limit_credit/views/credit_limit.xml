@@ -95,7 +95,7 @@
                                 <group>
                                     <field name="credit_line_ids" readonly="1">
                                         <tree editable="bottom">
-                                            <field name="item" invisible="1"/>
+                                            <field name="item"/>
                                             <field name="name"/>
                                             <field name="credit_amount" sum="credit_amount"/>
                                             <field name="credit_id" invisible="1"/>
