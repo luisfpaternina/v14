@@ -156,6 +156,12 @@
             name="Credit limit"
             parent="menu_credit_limit_principal"
             action="action_view_credit_limit"/>
+
+        <menuitem 
+            id="menu_credit_limit_settings"
+            name="Settings"
+            parent="menu_credit_limit_principal"
+            action="action_view_credit_limit"/>
                    
     </data>
 </odoo>
