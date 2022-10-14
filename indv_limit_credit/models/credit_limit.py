@@ -162,8 +162,8 @@ class CreditLimit(models.Model):
                     'date': date_start,
                     'item': i,
                     'credit_id': credit.id,
+                    'credit_amount': credit.credit_amount_total,
                     'name': 'CUOTA #' + '' + str(i)
-                    'credit_amount': credit.credit_amount_total
                     })
                 date_start = date_start + relativedelta(months=1)
         return True
