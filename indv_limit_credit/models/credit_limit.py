@@ -9,7 +9,7 @@ from odoo.exceptions import ValidationError, UserError
 
 class CreditLimit(models.Model):
     _name = 'credit.limit'
-    _inherit = 'mail.thread'
+    _inherit = ['mail.thread', 'report.report_xlsx.abstract']
     _description = 'Credit limit'
 
     name = fields.Char(
