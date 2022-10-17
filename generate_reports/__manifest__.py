@@ -23,7 +23,7 @@
     'data': [
         
         #'views/res_partner.xml',
-        #'reports/report_credit_xlsx.xml',
+        'reports/report_xlsx.xml',
                    
     ],
     'installable': True
