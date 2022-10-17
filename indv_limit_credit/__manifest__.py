@@ -18,6 +18,7 @@
         'sale_management',
         'account_accountant',
         'contacts',
+        'report_xlsx',
 
     ],
 
