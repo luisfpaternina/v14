@@ -1,5 +1,5 @@
 {
-    'name': 'Credit limit',
+    'name': 'Generate reports ',
 
     'version': '14.0.0.0',
 
@@ -9,14 +9,12 @@
 
     'website': "",
 
-    'category': 'account',
+    'category': 'reports',
 
     'depends': [
 
        
         'base',
-        'sale_management',
-        'account_accountant',
         'contacts',
         'report_xlsx',
 
@@ -24,13 +22,8 @@
 
     'data': [
         
-        'data/sequences.xml',
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/credit_limit.xml',
-        'views/res_partner.xml',
-        'views/sale_order.xml',
-        'reports/report_credit_xlsx.xml',
+        #'views/res_partner.xml',
+        #'reports/report_credit_xlsx.xml',
                    
     ],
     'installable': True
