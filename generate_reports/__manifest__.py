@@ -1,5 +1,5 @@
 {
-    'name': 'Generate reports ',
+    'name': 'Generate Reports ',
 
     'version': '14.0.0.0',
 
