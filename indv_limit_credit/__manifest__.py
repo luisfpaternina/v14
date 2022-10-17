@@ -7,7 +7,7 @@
 
     'contributors': ['Luis Felipe Paternina'],
 
-    'website': "",
+    'website': "https://www.youtube.com/results?search_query=introdoo",
 
     'category': 'account',
 
@@ -29,7 +29,6 @@
         'views/credit_limit.xml',
         'views/res_partner.xml',
         'views/sale_order.xml',
-        'reports/report_credit_xlsx.xml',
                    
     ],
     'installable': True

@@ -3,11 +3,11 @@
 
     'version': '14.0.0.0',
 
-    'author': "Luis Felipe Paternina",
+    'author': "Introdoo",
 
     'contributors': ['Luis Felipe Paternina'],
 
-    'website': "",
+    'website': "https://www.youtube.com/results?search_query=introdoo",
 
     'category': 'reports',
 
