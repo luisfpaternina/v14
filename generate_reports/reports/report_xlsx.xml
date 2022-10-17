@@ -4,7 +4,7 @@
 
         <report
                 id="report_customer_xlsx"
-                string="Credit XLSX"
+                string="Print XLSX"
                 model="credit.limit"
                 report_type="xlsx"
                 name="generate_reports.report_customer_xlsx"
