@@ -168,18 +168,6 @@ class CreditLimit(models.Model):
                 date_start = date_start + relativedelta(months=1)
         return True
 
-    def print_report_excel(self):
-        return self.env.ref('indv_limit_credit.report_credit_xlsx').report_action(self)
-
-    def generate_xlsx_report(self, workbook, data, lines):
-        format1 = workbook.add_format({'front_size': 14, 'align': 'vcenter', 'bold': True})
-        format2 = workbook.add_format({'front_size': 14, 'align': 'vcenter'})
-        sheet.set_column(3, 3, 50)
-        sheet.set_column(3, 3, 50)
-        sheet.write(2, 2, 'Name', format1)
-        sheet.write(2, 3, 'Luis Felipe Paternina', format2)
-        sheet.write(3, 2, 'age', format1)
-        sheet.write(3, 3, '29', format1)
 
 
 class CreditLimitLines(models.Model):
