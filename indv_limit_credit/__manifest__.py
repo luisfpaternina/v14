@@ -31,6 +31,7 @@
         'views/credit_limit.xml',
         'views/res_partner.xml',
         'views/sale_order.xml',
+        'reports/report_credit_xlsx.xml',
                    
     ],
     'installable': True
