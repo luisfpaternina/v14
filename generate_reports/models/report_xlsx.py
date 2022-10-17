@@ -8,8 +8,9 @@ class ReportXlsx(models.AbstractModel):
 
 
     def generate_xlsx_report(self, workbook, data, lines):
-        # reporte
+        # reporte XLSX
         print('Líneas', lines)
         format1 = workbook.add_format({'font-size': 14, 'align': 'vcenter', 'bold': True})
         sheet = workbook.add_worksheet('reporte lfpv')
         sheet.write(2, 2, 'Name', format1)
+        sheet.write(2, 3, lines.name, format1)
