@@ -13,6 +13,7 @@ class ReportXlsx(models.AbstractModel):
         logging.info('*******************************************************************')
         logging.info('Líneas', lines)
         format1 = workbook.add_format({'font_size': 14, 'align': 'vcenter', 'bold': True})
+        format2 = workbook.add_format({'font_size': 10, 'align': 'vcenter'})
         sheet = workbook.add_worksheet('reporte lfpv')
         sheet.write(2, 2, 'Name', format1)
-        # sheet.write(2, 3, lines.name, format1)
+        sheet.write(2, 3, lines.name, format2)
