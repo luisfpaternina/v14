@@ -7,8 +7,8 @@
                 string="Credit XLSX"
                 model="credit.limit"
                 report_type="xlsx"
-                name="indv_limit_credit.report_template_credit_limit"
-                file="indv_limit_credit.report_template_credit_limit"/>
+                name="indv_limit_credit.report_credit_xlsx"
+                file="indv_limit_credit.report_credit_xlsx"/>
 
     </data>
 </odoo>
