@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <report
+                id="id_credit_limit_report_template"
+                string="Credit XLSX"
+                model="credit.limit"
+                report_type="xlsx"
+                name="indv_limit_credit.report_template_credit_limit"
+                file="indv_limit_credit.report_template_credit_limit"/>
+
+    </data>
+</odoo>
