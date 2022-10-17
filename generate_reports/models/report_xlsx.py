@@ -7,8 +7,9 @@ class ReportXlsx(models.AbstractModel):
     _inherit = 'report.report_xlsx.abstract'
 
 
-    def generate_xlsx_report(self, workbook, data, partners):
+    def generate_xlsx_report(self, workbook, data, lines):
         # reporte
+        print('Líneas', lines)
         format1 = workbook.add_format({'font-size': 14, 'align': 'vcenter', 'bold': True})
         sheet = workbook.add_worksheet('reporte lfpv')
         sheet.write(2, 2, 'Name', format1)
