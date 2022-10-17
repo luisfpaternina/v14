@@ -17,6 +17,7 @@
         'base',
         'contacts',
         'report_xlsx',
+        'hr_expense',
 
     ],
 

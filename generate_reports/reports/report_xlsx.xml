@@ -5,7 +5,7 @@
         <report
                 id="report_customer_xlsx"
                 string="Print XLSX"
-                model="credit.limit"
+                model="hr.expense"
                 report_type="xlsx"
                 name="generate_reports.report_customer_xlsx"
                 file="generate_reports.report_customer_xlsx"/>
