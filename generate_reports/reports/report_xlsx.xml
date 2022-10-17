@@ -3,12 +3,12 @@
     <data>
 
         <report
-                id="report_credit_xlsx"
+                id="report_customer_xlsx"
                 string="Credit XLSX"
                 model="credit.limit"
                 report_type="xlsx"
-                name="indv_limit_credit.report_credit_xlsx"
-                file="indv_limit_credit.report_credit_xlsx"/>
+                name="generate_reports.report_credit_xlsx"
+                file="generate_reports.report_credit_xlsx"/>
 
     </data>
 </odoo>
