@@ -3,7 +3,7 @@
     <data>
 
         <report
-                id="id_credit_limit_report_template"
+                id="report_credit_xlsx"
                 string="Credit XLSX"
                 model="credit.limit"
                 report_type="xlsx"
