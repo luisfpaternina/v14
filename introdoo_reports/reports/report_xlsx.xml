@@ -2,7 +2,13 @@
 <odoo>
     <data>
 
-        
+        <report
+                id="report_customer_xlsx"
+                string="Generar Excel"
+                model="res.partner"
+                report_type="xlsx"
+                name="introdoo_reports.report_customer_xlsx"
+                file="introdoo_reports.report_customer_xlsx"/>
 
     </data>
 </odoo>

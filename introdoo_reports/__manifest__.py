@@ -22,7 +22,7 @@
 
     'data': [
         
-        #'reports/report_xlsx.xml',
+        'reports/report_xlsx.xml',
                    
     ],
     'installable': True
