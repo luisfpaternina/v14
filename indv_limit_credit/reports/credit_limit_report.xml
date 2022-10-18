@@ -30,6 +30,54 @@
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
+                          <style>
+                                div#cuadro1{
+                                width:400px;
+                                height:130px;
+                                background-color:white;
+                                float:left;
+                                border: 1px solid black;
+                                padding: 10px;
+                                }
+                                div#cuadro2{
+                                width:400px;
+                                height:130px;
+                                background-color:white;
+                                float:right;
+                                border: 1px solid black;
+                                padding: 10px;
+                                }
+                                div#datos_fiscales{
+                                width:400px;
+                                height:30px;
+                                background-color:white;
+                                float:left;
+                                border: 0px solid black;
+                                padding: 10px;
+                                }
+                                div#datos_envio{
+                                width:400px;
+                                height:30px;
+                                background-color:white;
+                                float:right;
+                                border: 0px solid black;
+                                padding: 10px;
+                                }
+                                div#espacio{
+                                width:700px;
+                                height:20px;
+                                background-color:white;
+                                float:right;
+                                border: 0px solid black;
+                                }
+                                table, th, td {
+                                border:1px solid black;
+                                padding: 5px;
+                                }
+                                #t01 td {
+                                border: 0px solid black;
+                                }
+                          </style>
                           <br></br>
                           <div id="cuadro1">
                               <strong><span> </span><span t-field="o.partner_id"></span></strong><br></br>
