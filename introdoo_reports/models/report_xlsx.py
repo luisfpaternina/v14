@@ -13,4 +13,4 @@ class ReportXlsx(models.AbstractModel):
             format2 = workbook.add_format({'font_size': 10, 'align': 'vcenter'})
             sheet = workbook.add_worksheet('Hoja canal Introdoo')
             sheet.write(2, 2, 'Contactos', format1)
-            sheet.write(2, 3, sale.line.name, format2)
+            sheet.write(2, 3, line.name, format2)
