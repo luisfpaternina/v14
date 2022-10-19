@@ -33,7 +33,6 @@ class ResPartner(models.Model):
                 record.has_credit = False
                 record.credit_value = 0
 
-    @api.depends('vat')
     def compute_new_vat(self):
         for record in self:
             if record.vat and record.validate_vat == False:
