@@ -31,6 +31,14 @@ class ResPartner(models.Model):
                 record.has_credit = False
                 record.credit_value = 0
 
+    @api.depends('vat','name')
+    def _compute_new_vat(self):
+        for record in self:
+            if record.vat:
+                record.new_vat = record.vat
+            else:
+                record.new_vat = False
+
     @api.constrains('vat','name')
     def records_partners(self):
         exis_records = []
