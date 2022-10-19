@@ -39,7 +39,7 @@ class ResPartner(models.Model):
             else:
                 record.new_vat = False
 
-    @api.onchange('vat','name')
+    @api.onchange('vat')
     def compute_vat(self):
         for record in self:
             if record.new_vat:
