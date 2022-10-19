@@ -31,6 +31,7 @@ class ResPartner(models.Model):
     def records_partners(self):
         exis_records = []
         for record in self:
-            if record.vat not in exis_records:
-                raise ValidationError('No se puede modificar el vat del contacto')
-            exis_records.append(record.vat)
+            if record.vat:
+                if record.vat not in exis_records:
+                    raise ValidationError('No se puede modificar el vat del contacto')
+                exis_records.append(record.vat)
