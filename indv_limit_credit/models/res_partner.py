@@ -18,7 +18,7 @@ class ResPartner(models.Model):
         compute="compute_new_vat")
     validate_vat = fields.Boolean(
         string="Validator VAT",
-        compute="compute_new_vat")
+        compute="compute_vat")
 
 
     def compute_has_a_credit(self):
@@ -38,12 +38,15 @@ class ResPartner(models.Model):
         for record in self:
             if record.vat and record.validate_vat == False:
                 record.new_vat = record.vat
-                if record.new_vat:
-                    record.validate_vat = True
-                else:
-                    record.validate_vat = False
             else:
                 record.new_vat = False
+
+    def compute_vat(self):
+        for record in self:
+            if record.new_vat:
+                record.validate_vat = True
+            else:
+                record.validate_vat = False
 
     @api.constrains('vat')
     def records_partners(self):
