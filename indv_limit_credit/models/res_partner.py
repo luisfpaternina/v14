@@ -15,6 +15,8 @@ class ResPartner(models.Model):
         compute="compute_has_a_credit")
     new_vat = fields.Char(
         string="New vat")
+    validate_vat = fields.Boolean(
+        string="Validator VAT")
 
 
     def compute_has_a_credit(self):
