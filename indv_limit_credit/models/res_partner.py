@@ -17,7 +17,8 @@ class ResPartner(models.Model):
         string="New vat",
         compute="compute_new_vat")
     validate_vat = fields.Boolean(
-        string="Validator VAT")
+        string="Validator VAT",
+        compute="compute_validate_vat")
 
 
     def compute_has_a_credit(self):
@@ -35,16 +36,21 @@ class ResPartner(models.Model):
     @api.depends('vat','name')
     def compute_new_vat(self):
         for record in self:
-            if record.vat:
+            if record.vat and record.validate_vat == False:
                 record.new_vat = record.vat
             else:
                 record.new_vat = False
 
-    @api.constrains('vat','name')
-    def records_partners(self):
-        exis_records = []
+    @api.depends('vat','name')
+    def compute_validate_vat(self):
         for record in self:
-            if record.vat:
-                if record.vat not in exis_records:
-                    raise ValidationError('No se puede modificar el vat del contacto')
-                exis_records.append(record.vat)
+            if record.new_vat:
+                record.validate_vat = True
+            else:
+                record.validate_vat = False
+
+    @api.constrains('vat')
+    def records_partners(self):
+        for record in self:
+            if record.validate_vat:
+                raise ValidationError('No se puede modificar el vat del contacto')
