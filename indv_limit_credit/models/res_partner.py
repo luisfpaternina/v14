@@ -13,6 +13,8 @@ class ResPartner(models.Model):
     credit_value = fields.Float(
         string="Credit value",
         compute="compute_has_a_credit")
+    new_vat = fields.Char(
+        string="New vat")
 
 
     def compute_has_a_credit(self):
