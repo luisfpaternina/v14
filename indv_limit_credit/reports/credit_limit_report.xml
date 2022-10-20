@@ -30,7 +30,7 @@
                     </div>
                     <div class="article o_report_layout_standard">
                        <div class="page">
-                        <link rel="stylesheet" href="/indv_limit_credit/static/src/css/style.css"/>  
+                        <link rel="stylesheet" href="/indv_limit_credit/static/src/css/styles.css"/>  
                           <br></br>
                           <div id="cuadro1">
                               <strong><span> </span><span t-field="o.partner_id"></span></strong><br></br>
