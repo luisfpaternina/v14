@@ -29,8 +29,8 @@ class Students(models.Model):
 
     def name_get(self):
         result = []
-        for record in self:
-            result.append(record.id, '%s - %s'(record.identification_number, record.name))
+        for rec in self:
+            result.append((rec.id, '%s - %s' % (rec.identification_number, rec.name)))
         return result
 
     _sql_constraints = [
