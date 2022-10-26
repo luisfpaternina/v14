@@ -30,7 +30,7 @@ class Students(models.Model):
     def name_get(self):
         result = []
         for rec in self:
-            result.append((rec.id, '%s-%s'%(rec.identification_number, rec.name)))
+            result.append((rec.id, '%s - %s'%(rec.identification_number, rec.name)))
         return result
 
 
