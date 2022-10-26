@@ -27,6 +27,11 @@ class Students(models.Model):
     neighborhood = fields.Char(string="Neighborhood")
     email = fields.Char(string="Email")
 
+    def name_get(self):
+        result = []
+        for record in self:
+            result.append(record.id, '%s - %s'(record.identification_number, record.name))
+        return result
 
     _sql_constraints = [
 
